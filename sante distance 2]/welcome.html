@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="welcome-header">
+        <h1>Sante-Distance</h1>
+        <p>Votre plateforme de prise de rendez-vous médicaux en ligne.</p>
+        
+        <div class="welcome-buttons">
+            <a href="login.html" class="main-button secondary">Connexion</a>
+
+            <button onclick="handleInscription()" class="main-button">Inscription</button>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <h2>Découvrez nos services</h2>
+        <p>Prenez rendez-vous avec le médecin de votre choix, rapidement et facilement, depuis chez vous.</p>
+    </div>
+
+    <script>
+        function handleInscription() {
+            // 1. Display the acceptance message
+            alert("Inscription acceptée. Vous serez redirigé vers la page de Connexion.");
+
+            // 2. Automatically redirect the user to the login page (login.html)
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

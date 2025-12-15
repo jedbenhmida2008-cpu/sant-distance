@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossier Médical - Identification Patient</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific Styles for the Dossier Patient Form */
+        .dossier-container {
+            width: 800px;
+            max-width: 95%;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .dossier-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-header {
+            background-color: #007bff; /* Blue band matching your previous headers */
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Form Layout */
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .form-field {
+            flex: 1;
+            padding-right: 20px;
+            min-width: 250px;
+        }
+
+        .form-field-full {
+            width: 100%;
+            padding-right: 0;
+        }
+
+        .form-field label {
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .form-field input[type="text"], 
+        .form-field input[type="tel"], 
+        .form-field input[type="date"] {
+            width: calc(100% - 2px); /* Full width minus border */
+            border: none;
+            border-bottom: 1px solid black; /* Simulating the line */
+            padding: 5px 0;
+            margin-top: -5px;
+            font-size: 1em;
+            text-transform: uppercase;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .checkbox-group input[type="checkbox"] {
+            transform: scale(1.2);
+            margin-left: 5px;
+        }
+
+        /* Styling for the large fields at the bottom */
+        .large-field label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .large-field input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid black;
+            padding: 5px 0;
+            margin-top: -5px;
+        }
+        
+        .dossier-number {
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<script src="script.js"></script>
+<body>
+    <div class="dossier-container">
+        <div class="dossier-title">DOSSIER MEDICAL</div>
+        
+        <div class="dossier-number">
+            N° DE DOSSIER : <input type="text" style="width: 250px; display: inline-block; border: none; border-bottom: 1px solid black; text-align: center;">
+        </div>
+
+        <div class="section-header">IDENTIFICATION PATIENT</div>
+        
+        <form action="#">
+            
+            <div class="form-row">
+                <div class="form-field">
+                    <label>NOM MARITAL :</label>
+                    <input type="text">
+                </div>
+                <div class="form-field">
+                    <label>PRÉNOM :</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-field form-field-full">
+                    <label>NOM DE JEUNE FILLE :</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label>DATE DE NAISSANCE :</label>
+                    <input type="date" placeholder="DD/MM/AAAA">
+                </div>
+                <div class="form-field" style="max-width: 100px;">
+                    <label>AGE :</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-field" style="flex: 0 0 300px;">
+                    <label>SEXE :</label>
+                    <div class="checkbox-group">
+                        H <input type="checkbox" name="sexe" value="H">
+                        F <input type="checkbox" name="sexe" value="F">
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label>PROFESSION :</label>
+                    <input type="text">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-field form-field-full">
+                    <label>N° DE SS :</label>
+                    <input type="text">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-field form-field-full">
+                    <label>ADRESSE :</label>
+                    <input type="text">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-field" style="flex: 0 0 300px;">
+                    <label>TÉL :</label>
+                    <input type="tel">
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px;">
+                
+                <label>GROUPE SANGUIN :</label>
+                <div class="checkbox-group" style="margin-bottom: 20px;">
+                    A <input type="checkbox" name="blood_group" value="A">
+                    B <input type="checkbox" name="blood_group" value="B">
+                    AB <input type="checkbox" name="blood_group" value="AB">
+                    O <input type="checkbox" name="blood_group" value="O">
+                </div>
+                
+                <div class="large-field">
+                    <label>NOM DU MEDECIN TRAITANT :</label>
+                    <input type="text">
+                </div>
+
+                <div class="large-field">
+                    <label>TRAITEMENT :</label>
+                    <input type="text">
+                </div>
+
+                <div class="large-field">
+                    <label>ALLERGIES :</label>
+                    <input type="text">
+                </div>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <button type="submit" class="main-button">Enregistrer le Dossier</button>
+                <a href="dossier_medical.html" style="color: #007bff; margin-left: 20px;">Annuler</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

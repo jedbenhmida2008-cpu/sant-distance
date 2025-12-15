@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendez-vous</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <div class="header">
+        <h1>Prendre un rendez-vous</h1>
+        <p>Choisissez votre médecin et l'horaire</p>
+    </div>
+
+    <div class="content-container">
+        <form action="dossier_medical.html"> 
+            <div class="form-group">
+                <select>
+                    <option selected>Dr. Ahmed - Généraliste</option>
+                    <option>Dr. Zina - Pédiatre</option>
+                    <option>Dr. Sami - Cardiologue</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <input type="date" placeholder="mm/dd/yyyy" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="time" required>
+            </div>
+            
+            <button type="submit" class="main-button">Confirmer le rendez-vous</button>
+        </form>
+        
+        <p style="margin-top: 30px;">
+            <a href="login.html" style="color: #007bff;">Se déconnecter</a>
+        </p>
+    </div>
+</body>
+</html>

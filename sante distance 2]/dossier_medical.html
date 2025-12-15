@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santé à Distance | Tableau de Bord</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styles for the Dossier Medical page (Hero Section) */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f0f4f7; /* Light background */
+            padding: 50px 10%;
+            min-height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-text {
+            max-width: 50%;
+            text-align: left;
+            z-index: 10;
+        }
+
+        .hero-text h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero-image-container {
+            max-width: 45%;
+            z-index: 5;
+            /* Placeholder to simulate the large doctor image */
+            background-color: rgba(0, 123, 255, 0.1); 
+            height: 350px;
+            width: 350px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .hero-image-container p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2em;
+            color: #007bff;
+        }
+        
+        /* Navigation bar styling (simulating the top bar in the image) */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .navbar-links a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .main-content-area {
+            padding: 50px 10%;
+            text-align: left;
+        }
+
+        .main-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+            text-decoration: none;
+            display: inline-block; 
+            transition: background-color 0.3s;
+        }
+        
+        .main-button:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<script src="script.js"></script>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <span style="color: red;">+</span> Santé à Distance
+        </div>
+        <div class="navbar-links">
+            <a href="rdv.html">Rendez-vous</a>
+            
+            <a href="payment.html">Paiement</a> 
+            
+            <a href="messagerie.html">Messagerie</a>
+        </div>
+        <div>
+             <a href="login.html" class="main-button">Se Déconnecter</a>
+        </div>
+    </div>
+
+    <div class="hero-section">
+        <div class="hero-text">
+            <p style="font-size: 0.9em; color: #555;">Tableau de Bord</p>
+            <h2>Créer un dossier médical</h2>
+            <a href="dossier_patient.html" class="main-button" style="background-color: #00a896; margin-top: 15px;">
+                Créer un document
+            </a>
+        </div>
+        <div class="hero-image-container">
+            <p>Image Placeholder: Doctor</p>
+        </div>
+    </div>
+
+    <div class="main-content-area">
+        <h3>Derniers Documents</h3>
+        <p>Aperçu des documents récents et informations médicales.</p>
+        <div style="display: flex; gap: 20px; margin-top: 20px;">
+            <div style="border: 1px solid #ddd; padding: 20px; width: 30%;">
+                <h4>Bilan de Santé</h4>
+                <p>Vos derniers résultats d'analyses.</p>
+            </div>
+            <div style="border: 1px solid #ddd; padding: 20px; width: 30%;">
+                <h4>Rendez-vous</h4>
+                <p>Prochain rendez-vous: 15/12/2025</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

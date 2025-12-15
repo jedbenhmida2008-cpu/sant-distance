@@ -1,0 +1,196 @@
+/* Apply a smooth font and remove default margins */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f7; /* Light background for the main body */
+}
+
+/* Header styling (the blue bar at the top) */
+.header {
+    background-color: #007bff; /* Bright blue color */
+    color: white; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.header p {
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+/* Container for the form content */
+.content-container {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center;
+}
+
+/* Styling for the form elements (input fields and buttons) */
+.form-group {
+    margin-bottom: 15px;
+    width: 300px; /* Fixed width for inputs */
+    max-width: 90%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding/border in the element's total width */
+    font-size: 1em;
+    text-align: center; /* Center text in the inputs */
+}
+
+/* Main action button styling */
+.main-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    text-decoration: none; /* For button links */
+    display: inline-block; /* For button links */
+}
+
+.main-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* --- Styling for Welcome Page (welcome.html) --- */
+
+.welcome-header {
+    /* Use header styles but make the padding larger for a splash screen effect */
+    background-color: #007bff;
+    color: white;
+    padding: 100px 0; 
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-header h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.welcome-header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.welcome-buttons {
+    margin-top: 40px;
+}
+
+.welcome-buttons .main-button {
+    margin: 0 15px;
+    padding: 12px 30px;
+    font-size: 1.2em;
+}
+
+.welcome-buttons .main-button.secondary {
+    background-color: white;
+    color: #007bff;
+    border: 2px solid #007bff; 
+}
+
+.welcome-buttons .main-button.secondary:hover {
+    background-color: #e2f0ff;
+}
+/* --- Styling for Messagerie Page (messagerie.html) --- */
+
+.message-page-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ffffff; /* White background for the list area */
+}
+
+.messenger-list {
+    width: 100%;
+    max-width: 400px; /* Constrain the width for a clean mobile-like list */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.messenger-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.messenger-item:hover {
+    background-color: #f7f7f7;
+}
+
+.messenger-item:last-child {
+    border-bottom: none;
+}
+
+.messenger-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* Placeholder background for the profile pictures */
+    background-color: #ccc; 
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+/* Specific styling for the avatar placeholder */
+.messenger-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.messenger-details {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.messenger-details h4 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.messenger-details p {
+    margin: 3px 0 0;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #007bff; /* Example status color */
+    border-radius: 50%;
+    margin-left: 10px;
+}
